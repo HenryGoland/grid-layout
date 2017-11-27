@@ -1,0 +1,160 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+
+.perso{
+    box-sizing:border-box;
+    text-align:center;
+    font-size:24px;
+    line-height:100px;
+    color:white;
+    font-family:"Helvetica", "sans-serif";
+    transition: 1s;
+}
+
+.perso:hover{
+    font-size:36px;
+    border-radius:40px;
+}
+
+.hero {
+  background-color: #00ADE3;
+  border: 5px solid #FFFFFF;
+}
+.sidekick-a {
+  background-color: #FCB823;
+  border: 5px solid #FCB823;
+}
+.sidekick-b {
+  background-color: #BAE0CD;
+  border: 5px solid #23B1A5;
+}
+.minor-a {
+  background-color: #EEF1F3;
+  border: 5px solid #020306;
+}
+.minor-b {
+  background-color: #FFA300;
+  border: 5px solid #FF410B;
+}
+.minor-c {
+  background-color: #0072BC;
+  border: 5px solid #A3D8F5;
+}
+.minor-d {
+  background-color: #E7CEE3;
+  border: 5px solid #F299BF;
+}
+.minor-e {
+  background-color: #E0ABCE;
+  border: 5px solid #F8F390;
+}
+.minor-f {
+  background-color: #BB9DC8;
+  border: 5px solid #FFDF74;
+}
+
+.wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:
+      "hero"
+      "sidekick-a"
+      "sidekick-b"
+      "minor-a"
+      "minor-b"
+      "minor-c"
+      "minor-d"
+      "minor-e"
+      "minor-f";
+    }
+
+@media (max-width: 640px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:
+      "hero"
+      "sidekick-a"
+      "sidekick-b"
+      "minor-a"
+      "minor-b"
+      "minor-c"
+      "minor-d"
+      "minor-e"
+      "minor-f";
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:
+      "hero hero"
+      "sidekick-a sidekick-b"
+      "minor-a minor-b"
+      "minor-c minor-d"
+      "minor-e minor-f";
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:
+      "hero sidekick-a sidekick-b"
+      "minor-a minor-b minor-c"
+      "minor-d minor-e minor-f";
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:
+      "hero hero"
+      "sidekick-a sidekick-b"
+      "minor-a minor-b"
+      "minor-c minor-d"
+      "minor-e minor-f";
+    }
+}
+
+@media (min-width: 1281px){
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:
+      "hero hero hero hero"
+      "sidekick-a sidekick-b minor-a minor-b"
+      "minor-c minor-c minor-d minor-d"
+      "minor-e minor-e minor-f minor-f";
+    }
+}
+
+.hero { grid-area: hero; }
+.sidekick-a { grid-area: sidekick-a; }
+.sidekick-b { grid-area: sidekick-b; }
+.sidekick-c { grid-area: sidekick-c; }
+.minor-a {grid-area: minor-a;}
+.minor-b {grid-area: minor-b;}
+.minor-c {grid-area: minor-c;}
+.minor-d {grid-area: minor-d;}
+.minor-e {grid-area: minor-e;}
+.minor-f {grid-area: minor-f;}
